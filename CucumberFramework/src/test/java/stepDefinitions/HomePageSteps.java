@@ -3,8 +3,6 @@ package stepDefinitions;
 import cucumber.TestContext;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
-import managers.PageObjectManager;
-import managers.WebDriverManager;
 import pageObjects.HomePage;
 
 public class HomePageSteps {
