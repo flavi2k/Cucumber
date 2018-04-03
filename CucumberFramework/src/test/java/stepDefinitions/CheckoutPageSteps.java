@@ -31,7 +31,7 @@ public class CheckoutPageSteps {
  
 	@When("^place the order$")
 	public void place_the_order() {
-		checkoutPage.check_TermsAndCondition(true);
+		checkoutPage.check_TermsAndCondition(false);
 		checkoutPage.clickOn_PlaceOrder();		
 	}	
 }

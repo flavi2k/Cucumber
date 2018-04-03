@@ -9,8 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import selenium.Wait;
-
 public class CheckoutPage {
 	WebDriver driver;
 
@@ -90,8 +88,8 @@ public class CheckoutPage {
 
 	public void check_ShipToDifferentAddress(boolean value) {
 		if (!value)
+//		Wait.untilJqueryIsDone(driver);
 			chkbx_ShipToDifferetAddress.click();
-		Wait.untilJqueryIsDone(driver);
 	}
 
 	public void select_Country(String countryName) {
@@ -115,21 +113,21 @@ public class CheckoutPage {
 		for (WebElement county : country_List) {
 			if (county.getText().equals(countyName)) {
 				county.click();
-				Wait.untilJqueryIsDone(driver);
+//				Wait.untilJqueryIsDone(driver);
 				break;
 			}
 		}
 	}
 
 	public void select_PaymentMethod(String paymentMethod) {
-		if (paymentMethod.equals("CheckPayment")) {
+		/*if (paymentMethod.equals("CheckPayment")) {
 			paymentMethod_List.get(0).click();
 		} else if (paymentMethod.equals("Cash")) {
 			paymentMethod_List.get(1).click();
 		} else {
 			new Exception("Payment Method not recognised : " + paymentMethod);
-		}
-		Wait.untilJqueryIsDone(driver);
+		}*/
+//		Wait.untilJqueryIsDone(driver);
 	}
 
 	public void check_TermsAndCondition(boolean value) {
@@ -139,7 +137,7 @@ public class CheckoutPage {
 
 	public void clickOn_PlaceOrder() {
 		btn_PlaceOrder.submit();
-		Wait.untilJqueryIsDone(driver);
+//		Wait.untilJqueryIsDone(driver);
 	}
 
 	public void fill_PersonalDetails() {
