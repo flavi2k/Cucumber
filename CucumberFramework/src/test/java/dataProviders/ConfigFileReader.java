@@ -76,4 +76,9 @@ public class ConfigFileReader {
 		if(windowSize != null) return Boolean.valueOf(windowSize);
 		return true;
 	}
+	
+	public String getReportConfigPath(){
+		String reportConfigPath = System.getProperty("user.dir")+ properties.getProperty("reportConfigPath");
+		return reportConfigPath;		
+	}
 }
